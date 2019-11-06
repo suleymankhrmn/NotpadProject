@@ -26,16 +26,20 @@ namespace NotpadApp
         {
 
         }
-        public event EventHandler CanExecuteChanged;
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
 
         public bool CanExecute(object parameter)
         {
-            throw new NotImplementedException();
+            return _canExecute == null ? true : _canExecute();
         }
 
         public void Execute(object parameter)
         {
-            throw new NotImplementedException();
+            _execute.Invoke();
         }
     }
 }

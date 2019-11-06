@@ -20,7 +20,7 @@ namespace NotpadApp.Models
             }
             set
             {
-                OnpropertyChanged(ref _text, value);
+                OnPropertyChanged(ref _text, value);
             }
         }
 
@@ -33,7 +33,7 @@ namespace NotpadApp.Models
             }
             set
             {
-                OnpropertyChanged(ref _filePath, value);
+                OnPropertyChanged(ref _filePath, value);
             }
         }
 
@@ -45,7 +45,7 @@ namespace NotpadApp.Models
             }
             set
             {
-                OnpropertyChanged(ref _fileName, value);
+                OnPropertyChanged(ref _fileName, value);
             }
         }
 
